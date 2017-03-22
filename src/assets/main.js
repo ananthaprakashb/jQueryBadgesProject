@@ -5,13 +5,12 @@ $(function() {
    dataType: 'jsonp',
    success: function(response) {
      var badges = document.querySelector('#badges');
-     var courses = "";
      response.courses.completed.forEach(function(el){
        var newDiv = document.createElement('div');
        newDiv.className="course";
+       var subhead = document.createElement('h3')
        badges.appendChild(newDiv);
      });
-     badgets.innerHTML = courses;
    }
  });
 
