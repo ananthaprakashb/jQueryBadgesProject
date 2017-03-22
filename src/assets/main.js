@@ -7,7 +7,9 @@ $(function() {
      var badges = document.querySelector('#badges');
      var courses = "";
      response.courses.completed.forEach(function(el){
-       courses+="<div class='course'><h3 title="+ el.title + ">"+ el.badge +"</h3><a href=\"" + el.url + "\" target=_blank class=\"btn btn-primary\">See Course</a></div>";
+       var newDiv = document.createElement('div');
+       newDiv.className="course";
+       badges.appendChild(newDiv);
      });
      badgets.innerHTML = courses;
    }
